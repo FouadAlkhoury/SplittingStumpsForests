@@ -1,0 +1,59 @@
+Depth, Frequency, Model, Accuracy, Deviation,
+LR	RF_64_5_pruned_1.0.json	0 +- 0
+Training Time for RF_64_5_pruned_1.0.json , LR : 0:00:36.509942
+LR	RF_64_5_pruned_0.95.json	0 +- 0
+Training Time for RF_64_5_pruned_0.95.json , LR : 0:00:34.758383
+LR	RF_64_5_pruned_0.9.json	0 +- 0
+Training Time for RF_64_5_pruned_0.9.json , LR : 0:00:44.121514
+LR	RF_64_5_pruned_0.85.json	0 +- 0
+Training Time for RF_64_5_pruned_0.85.json , LR : 0:01:08.890544
+LR	RF_64_5_pruned_0.8.json	0 +- 0
+Training Time for RF_64_5_pruned_0.8.json , LR : 0:00:55.953187
+LR	RF_64_5_pruned_0.75.json	0 +- 0
+Training Time for RF_64_5_pruned_0.75.json , LR : 0:00:44.748056
+LR	RF_64_5_pruned_0.7.json	0 +- 0
+Training Time for RF_64_5_pruned_0.7.json , LR : 0:00:39.958944
+LR	RF_64_5_pruned_0.65.json	0 +- 0
+Training Time for RF_64_5_pruned_0.65.json , LR : 0:00:32.532368
+LR	RF_64_5_pruned_0.6.json	0 +- 0
+Training Time for RF_64_5_pruned_0.6.json , LR : 0:00:16.252206
+LR	RF_64_10_pruned_1.0.json	0 +- 0
+Training Time for RF_64_10_pruned_1.0.json , LR : 0:05:44.388806
+LR	RF_64_10_pruned_0.95.json	0 +- 0
+Training Time for RF_64_10_pruned_0.95.json , LR : 0:00:22.751398
+LR	RF_64_10_pruned_0.9.json	0 +- 0
+Training Time for RF_64_10_pruned_0.9.json , LR : 0:05:38.970914
+LR	RF_64_10_pruned_0.85.json	0 +- 0
+Training Time for RF_64_10_pruned_0.85.json , LR : 0:11:56.776563
+LR	RF_64_10_pruned_0.8.json	0 +- 0
+Training Time for RF_64_10_pruned_0.8.json , LR : 0:10:11.052600
+LR	RF_64_10_pruned_0.75.json	0 +- 0
+Training Time for RF_64_10_pruned_0.75.json , LR : 0:04:12.295149
+LR	RF_64_10_pruned_0.7.json	0 +- 0
+Training Time for RF_64_10_pruned_0.7.json , LR : 0:05:54.093164
+LR	RF_64_10_pruned_0.65.json	0 +- 0
+Training Time for RF_64_10_pruned_0.65.json , LR : 0:03:36.755933
+LR	RF_64_10_pruned_0.6.json	0 +- 0
+Training Time for RF_64_10_pruned_0.6.json , LR : 0:02:09.813414
+LR	RF_64_15_pruned_1.0.json	0 +- 0
+Training Time for RF_64_15_pruned_1.0.json , LR : 0:52:17.324192
+LR	RF_64_15_pruned_0.95.json	0 +- 0
+Training Time for RF_64_15_pruned_0.95.json , LR : 0:00:48.345574
+LR	RF_64_15_pruned_0.9.json	0 +- 0
+Training Time for RF_64_15_pruned_0.9.json , LR : 0:06:00.325353
+LR	RF_64_15_pruned_0.85.json	0 +- 0
+Training Time for RF_64_15_pruned_0.85.json , LR : 0:25:29.770775
+LR	RF_64_15_pruned_0.8.json	0 +- 0
+Training Time for RF_64_15_pruned_0.8.json , LR : 0:17:40.067050
+LR	RF_64_15_pruned_0.75.json	0 +- 0
+Training Time for RF_64_15_pruned_0.75.json , LR : 0:20:01.679845
+LR	RF_64_15_pruned_0.7.json	0 +- 0
+Training Time for RF_64_15_pruned_0.7.json , LR : 0:31:22.817384
+LR	RF_64_15_pruned_0.65.json	0 +- 0
+Training Time for RF_64_15_pruned_0.65.json , LR : 0:15:01.694329
+LR	RF_64_15_pruned_0.6.json	0 +- 0
+Training Time for RF_64_15_pruned_0.6.json , LR : 0:08:31.516423
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,

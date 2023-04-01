@@ -1,0 +1,4 @@
+Pruning Time 	 
+Pruning Time 	 
+Total Training Time: 0:19:02.644819
+

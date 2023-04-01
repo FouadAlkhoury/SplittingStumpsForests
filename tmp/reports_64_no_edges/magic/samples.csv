@@ -1,0 +1,16 @@
+Sample, Test Accuracy
+1,0.828
+2,0.834
+3,0.831
+4,0.827
+5,0.831
+
+ ,mean, std
+,0.83,0.002
+Sample, Test Accuracy
+1,0.829
+2,0.829
+3,0.829
+
+ ,mean, std
+,0.829,0.0

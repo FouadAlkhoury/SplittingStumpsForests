@@ -1,0 +1,88 @@
+Fitting Models Time 	 0:00:00.060288
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.003594
+Mining Time for RF_25_5.graph : 0:00:00.005782
+Total Mining Time: 0:00:00.009516
+
+Training Time 	 
+Total Training Time: 0:00:00.000024
+
+Fitting Models Time 	 0:00:00.000003
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:00:06.465088
+
+Fitting Models Time 	 0:00:00.059890
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.003634
+Mining Time for RF_25_5.graph : 0:00:00.005625
+Total Mining Time: 0:00:00.009372
+
+Training Time 	 
+Total Training Time: 0:00:00.000013
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Total Training Time: 0:00:25.619093
+
+Fitting Models Time 	 0:00:00.059879
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.003561
+Mining Time for RF_25_5.graph : 0:00:00.005824
+Total Mining Time: 0:00:00.009511
+
+Training Time 	 
+Total Training Time: 0:00:00.000016
+
+Fitting Models Time 	 0:00:00.000003
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:00:23.615157
+
+Fitting Models Time 	 0:00:06.169130
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:01.365395
+Mining Time for RF_25_15.graph : 0:00:00.155063
+Mining Time for RF_25_10.graph : 0:00:00.057483
+Mining Time for RF_25_5.graph : 0:00:00.008121
+Mining Time for RF_100_5.graph : 0:00:00.018088
+Mining Time for RF_50_10.graph : 0:00:00.118678
+Mining Time for RF_50_5.graph : 0:00:00.011146
+Mining Time for RF_50_15.graph : 0:00:00.316838
+Mining Time for RF_100_15.graph : 0:00:00.884533
+Mining Time for RF_100_10.graph : 0:00:00.268626
+Total Mining Time: 0:00:03.204588
+
+Training Time 	 
+Total Training Time: 0:00:00.007316
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000012
+
+Training Time 	 
+Total Training Time: 1:57:22.308693
+

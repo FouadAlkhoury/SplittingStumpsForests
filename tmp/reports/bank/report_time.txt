@@ -1,0 +1,97 @@
+Fitting Models Time 	 0:00:00.104145
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.359399
+Mining Time for RF_5.graph : 0:00:00.007668
+Fitting Models Time 	 0:00:00.101978
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.350488
+Mining Time for RF_5.graph : 0:00:00.007721
+Fitting Models Time 	 0:00:00.104290
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.362119
+Mining Time for RF_5.graph : 0:00:00.007542
+Mining Time for RF_15.graph : 0:00:45.100774
+Mining Time for RF_15_pruned_with_sigma_0_1.graph : 0:01:06.917760
+Total Mining Time: 0:01:52.388469
+
+Training Time 	 
+Fitting Models Time 	 0:00:00.000005
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000007
+
+Training Time 	 
+Total Training Time: 0:06:19.591169
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:01:58.618713
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Total Training Time: 0:02:50.640021
+
+Fitting Models Time 	 0:00:00.112777
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.409982
+Mining Time for RF_5.graph : 0:00:00.185076
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:19:43.477850
+
+Fitting Models Time 	 0:00:00.000005
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:06:34.402534
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000007
+
+Training Time 	 
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Fitting Models Time 	 0:00:00.000005
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Total Training Time: 0:10:39.855969
+

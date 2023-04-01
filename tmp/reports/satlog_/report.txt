@@ -1,0 +1,274 @@
+Fitting Models Time 	 0:00:00.099029
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.104297
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000024
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.099073
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.104740
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000002
+
+Fitting Models Time 	 0:00:00.104426
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000024
+
+Training Time 	 
+Total Training Time: 0:00:00.000002
+
+Fitting Models Time 	 0:00:00.113204
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.122414
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.135258
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.135500
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.132084
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.136978
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000023
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.138428
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000023
+
+Training Time 	 
+Total Training Time: 0:00:00.000002
+
+Fitting Models Time 	 0:00:00.133352
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000025
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.130293
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000033
+
+Training Time 	 
+Total Training Time: 0:00:00.000002
+
+Fitting Models Time 	 0:00:00.133680
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000022
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.123334
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000022
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.118340
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000026
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.105999
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000022
+
+Training Time 	 
+Total Training Time: 0:00:00.000001
+
+Fitting Models Time 	 0:00:00.104307
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000038
+
+Training Time 	 
+Total Training Time: 0:00:00.000002
+
+Fitting Models Time 	 0:00:00.148002
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000021
+
+Training Time 	 
+DSF_NB	RF_5_t2.json	0.7957158962795942 +- 0.05875624793651349
+DSF_SVM	RF_5_t2.json	0.8354002254791432 +- 0.045449570867937036
+DSF_LR	RF_5_t2.json	0.8363021420518602 +- 0.04686712946787349
+Training Time for RF_5_t2.json : 0:04:09.516710
+Total Training Time: 0:04:09.517217
+
+Fitting Models Time 	 0:00:00.139442
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000022
+
+Training Time 	 
+DSF_NB	RF_5_t2.json	0.7801578354002255 +- 0.06531504589895594
+DSF_SVM	RF_5_t2.json	0.8419391206313416 +- 0.04839351855800247
+DSF_LR	RF_5_t2.json	0.8408117249154454 +- 0.05129539005441028
+Training Time for RF_5_t2.json : 0:00:21.751911
+Total Training Time: 0:00:21.752341
+
+Fitting Models Time 	 0:00:00.138509
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000026
+
+Training Time 	 
+DSF_NB	RF_5_t2.json	0.7916572717023675 +- 0.06816559320760707
+DSF_SVM	RF_5_t2.json	0.8448703494926718 +- 0.037632732437474774
+DSF_LR	RF_5_t2.json	0.8419391206313416 +- 0.036527621195039446
+Training Time for RF_5_t2.json : 0:00:24.622442
+Total Training Time: 0:00:24.622701
+
+Fitting Models Time 	 0:00:00.142867
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000020
+
+Training Time 	 
+DSF_NB	RF_5_t2.json	0.7754227733934611 +- 0.05790645064031973
+DSF_SVM	RF_5_t2.json	0.8421645997745209 +- 0.03481444701802712
+DSF_LR	RF_5_t2.json	0.8335963923337092 +- 0.038202581956172633
+Training Time for RF_5_t2.json : 0:00:27.624760
+Total Training Time: 0:00:27.625175
+
+Fitting Models Time 	 0:00:00.139558
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000022
+
+Training Time 	 
+DSF_NB	RF_5_t2.json	0.7898534385569336 +- 0.06648614910786753
+DSF_SVM	RF_5_t2.json	0.8430665163472378 +- 0.03560429193954994
+DSF_LR	RF_5_t2.json	0.8390078917700112 +- 0.03705960820158668
+Training Time for RF_5_t2.json : 0:00:29.049848
+Total Training Time: 0:00:29.050316
+
+Fitting Models Time 	 0:00:00.140613
+
+Pruning Time 	 
+RF 	 Sigma 	 Pruning Time
+Mining Time 	 
+Total Mining Time: 0:00:00.000036
+
+Training Time 	 
+DSF_NB	RF_5_t2.json	0.7968432919954904 +- 0.05882110844057917
+DSF_SVM	RF_5_t2.json	0.8387824126268318 +- 0.04253734404349923
+DSF_LR	RF_5_t2.json	0.8405862457722659 +- 0.03853385122359966
+Training Time for RF_5_t2.json : 0:00:27.348467
+Total Training Time: 0:00:27.348903
+

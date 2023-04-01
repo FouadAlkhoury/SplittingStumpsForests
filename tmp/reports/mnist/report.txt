@@ -1,0 +1,71 @@
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.7846500000000001 +- 0.010765479810744884
+Training Time for RF_5_t2.json , NB : 0:00:00.603166
+SVM	RF_5_t2.json	0.8429 +- 0.00938281526100894
+Training Time for RF_5_t2.json , SVM : 0:13:46.859923
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.7846500000000001 +- 0.010765479810744884
+Training Time for RF_5_t2.json , NB : 0:00:00.629137
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.7808333333333334 +- 0.01124660442583054
+Training Time for RF_5_t2.json , NB : 0:00:00.579660
+SVM	RF_5_t2.json	0.8421 +- 0.009641115656972002
+Training Time for RF_5_t2.json , SVM : 0:11:29.567592
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.7678999999999999 +- 0.011218090548553975
+Training Time for RF_5_t2.json , NB : 0:00:00.320855
+SVM	RF_5_t2.json	0.8274333333333332 +- 0.009164757376918263
+Training Time for RF_5_t2.json , SVM : 0:09:03.116075
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.7778499999999999 +- 0.011202479884184382
+Training Time for RF_5_t2.json , NB : 0:00:00.336258
+SVM	RF_5_t2.json	0.8385333333333334 +- 0.008887975647531389
+Training Time for RF_5_t2.json , SVM : 0:10:29.880480
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t1.json	0.8285 +- 0.010333064512632339
+Training Time for RF_5_t1.json , NB : 0:00:02.227283
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t1.json	0.8285 +- 0.010333064512632339
+Training Time for RF_5_t1.json , NB : 0:00:01.610578
+SVM	RF_5_t1.json	0.9033166666666668 +- 0.004499814811004261
+Training Time for RF_5_t1.json , SVM : 2:27:09.844312
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.7703666666666666 +- 0.012338805092516513
+Training Time for RF_5_t2.json , NB : 0:00:00.300710
+SVM	RF_5_t2.json	0.8394999999999999 +- 0.008883661657472343
+Training Time for RF_5_t2.json , SVM : 0:15:49.241567
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	new_RF_5_t2.json	0.7533999999999998 +- 0.01157696467607599
+Training Time for new_RF_5_t2.json , NB : 0:00:00.593355
+SVM	new_RF_5_t2.json	0.8006 +- 0.010689220946563164
+Training Time for new_RF_5_t2.json , SVM : 0:16:01.017659
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,

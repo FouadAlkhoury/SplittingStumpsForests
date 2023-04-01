@@ -1,0 +1,63 @@
+Depth, Frequency, Model, Accuracy, Deviation,
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t2.json	0 +- 0
+Training Time for RF_25_5_t2.json , NB : 0:00:00.720146
+Depth, Frequency, Model, Accuracy, Deviation,
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t2.json	0 +- 0
+Training Time for RF_25_5_t2.json , NB : 0:00:00.715941
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t2.json	0 +- 0
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t2.json	0 +- 0
+Training Time for RF_25_5_t2.json , NB : 0:00:00.718392
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t2.json	0 +- 0
+Training Time for RF_25_5_t2.json , NB : 0:00:00.719239
+SVM	RF_25_5_t2.json	0 +- 0
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t2.json	0 +- 0
+Training Time for RF_25_5_t2.json , NB : 0:00:00.713044
+LR	RF_25_5_t2.json	0 +- 0
+Depth, Frequency, Model, Accuracy, Deviation,
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t4.json	0 +- 0
+Training Time for RF_25_5_t4.json , NB : 0:00:00.669677
+LR	RF_25_5_t4.json	0 +- 0
+Depth, Frequency, Model, Accuracy, Deviation,
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_25_5_t5.json	0 +- 0
+Training Time for RF_25_5_t5.json , NB : 0:00:00.889491
+LR	RF_25_5_t5.json	0 +- 0
+Depth, Frequency, Model, Accuracy, Deviation,
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,

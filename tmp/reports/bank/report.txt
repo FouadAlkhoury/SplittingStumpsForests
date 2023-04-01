@@ -1,0 +1,65 @@
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.8192878338278933 +- 0.008844834801758046
+Training Time for RF_5_t2.json , NB : 0:00:00.217710
+SVM	RF_5_t2.json	0.9004046398705153 +- 0.0013928600640329618
+Training Time for RF_5_t2.json , SVM : 0:06:09.951309
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.7343674130024278 +- 0.007746666841775724
+Training Time for RF_5_t2.json , NB : 0:00:00.113058
+SVM	RF_5_t2.json	0.9008092797410304 +- 0.0014238622304177757
+Training Time for RF_5_t2.json , SVM : 0:01:51.745684
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.745157809549501 +- 0.007121150793813173
+Training Time for RF_5_t2.json , NB : 0:00:00.129927
+SVM	RF_5_t2.json	0.9005395198273536 +- 0.0016488488578296516
+Training Time for RF_5_t2.json , SVM : 0:02:43.495481
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t1.json	0.789964931211222 +- 0.010607225994819591
+Training Time for RF_5_t1.json , NB : 0:00:00.553478
+SVM	RF_5_t1.json	0.8995953601294847 +- 0.001000660209926713
+Training Time for RF_5_t1.json , SVM : 0:19:15.465980
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t1.json	0.7254923118424601 +- 0.007089811965965053
+Training Time for RF_5_t1.json , NB : 0:00:00.321854
+SVM	RF_5_t1.json	0.9005125438359858 +- 0.001133633741000863
+Training Time for RF_5_t1.json , SVM : 0:06:16.720952
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	RF_5_t2.json	0.8192878338278933 +- 0.008844834801758046
+Training Time for RF_5_t2.json , NB : 0:00:00.219516
+SVM	RF_5_t2.json	0.9004046398705153 +- 0.0013928600640329618
+Training Time for RF_5_t2.json , SVM : 0:05:08.951202
+Depth, Frequency, Model, Accuracy, Deviation,
+NB	trained_splits_2022-03-03 14:08:52.814439_RF_5_t2.json	0.8047207984893445 +- 0.0072521780773505
+Training Time for trained_splits_2022-03-03 14:08:52.814439_RF_5_t2.json , NB : 0:00:00.212869
+SVM	trained_splits_2022-03-03 14:08:52.814439_RF_5_t2.json	0.8997572160776908 +- 0.0013712721906812499
+Training Time for trained_splits_2022-03-03 14:08:52.814439_RF_5_t2.json , SVM : 0:05:07.545276
+NB	trained_splits_2022-03-03 14:23:21.622206_RF_5_t2.json	0.6414620987321283 +- 0.005856586508661258
+Training Time for trained_splits_2022-03-03 14:23:21.622206_RF_5_t2.json , NB : 0:00:00.250487
+SVM	trained_splits_2022-03-03 14:23:21.622206_RF_5_t2.json	0.8965740490963044 +- 0.0012693056763980162
+Training Time for trained_splits_2022-03-03 14:23:21.622206_RF_5_t2.json , SVM : 0:05:12.056531
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,

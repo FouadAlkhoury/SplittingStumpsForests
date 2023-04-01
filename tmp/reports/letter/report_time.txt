@@ -1,0 +1,135 @@
+Fitting Models Time 	 0:00:00.092884
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.005229
+Mining Time for RF_5.graph : 0:00:00.008099
+Total Mining Time: 0:00:00.013481
+
+Training Time 	 
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Total Training Time: 0:02:50.107060
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Total Training Time: 0:02:02.974153
+
+Fitting Models Time 	 0:00:00.094870
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.004949
+Mining Time for RF_5.graph : 0:00:00.183916
+Total Mining Time: 0:00:00.189027
+
+Training Time 	 
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000007
+
+Training Time 	 
+Fitting Models Time 	 0:00:00.000005
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Total Training Time: 0:03:09.403919
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000008
+
+Training Time 	 
+Total Training Time: 0:01:56.642416
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:04:12.444052
+
+Fitting Models Time 	 0:00:00.000005
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:26:41.329738
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000012
+
+Training Time 	 
+Total Training Time: 0:56:15.888684
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 0:22:27.170399
+
+Fitting Models Time 	 0:00:00.185754
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:00.007561
+Mining Time for RF_1.graph : 0:00:00.004966
+Mining Time for RF_5.graph : 0:00:00.008251
+Total Mining Time: 0:00:00.020940
+
+Training Time 	 
+Fitting Models Time 	 0:00:08.740460
+
+Pruning Time 	 
+Mining Time 	 
+Translating Time :0:00:02.143781
+Mining Time for RF_25_15.graph : 0:00:00.157873
+Mining Time for RF_25_10.graph : 0:00:00.043663
+Mining Time for RF_25_5.graph : 0:00:00.008742
+Mining Time for RF_100_5.graph : 0:00:00.015703
+Mining Time for RF_50_10.graph : 0:00:00.088064
+Mining Time for RF_50_5.graph : 0:00:00.010948
+Mining Time for RF_50_15.graph : 0:00:00.342146
+Mining Time for RF_100_15.graph : 0:00:00.791649
+Mining Time for RF_100_10.graph : 0:00:00.183466
+Total Mining Time: 0:00:03.786574
+
+Training Time 	 
+Total Training Time: 0:00:00.007335
+
+Fitting Models Time 	 0:00:00.000004
+
+Pruning Time 	 
+Mining Time 	 
+Total Mining Time: 0:00:00.000009
+
+Training Time 	 
+Total Training Time: 8:18:14.117745
+

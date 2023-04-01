@@ -1,0 +1,10 @@
+Depth, Frequency, Model, Accuracy, Deviation,
+5,1,NB,0.7693854173613427,0.00832022505529625
+Training Time for RF_5_t1.json , NB : 0:00:06.145107
+5,2,NB,0.76938528398355,0.006908421370245609
+Training Time for RF_5_t2.json , NB : 0:00:00.121218
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,
+RF_5_t1.json,NB,0.769,0.762,25543

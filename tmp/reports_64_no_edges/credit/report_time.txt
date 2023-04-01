@@ -1,0 +1,22 @@
+Fitting Models Time 	 0:00:08.403208
+
+Pruning Time 	 
+Fitting Models Time 	 0:00:05.519769
+
+Pruning Time 	 
+Fitting Models Time 	 0:00:05.696151
+
+Pruning Time 	 
+Fitting Models Time 	 0:00:05.483920
+
+Pruning Time 	 
+Fitting Models Time 	 0:00:08.531601
+
+Pruning Time 	 
+Fitting Models Time 	 0:00:05.966062
+
+Pruning Time 	 
+Total Training Time: 0:00:02.930309
+
+Pruning Time 	 
+Pruning Time 	 
