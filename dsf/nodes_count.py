@@ -1,21 +1,18 @@
+# The script counts the number of nodes of the model.
 import os
 import numpy as np
 import math
+
 import sys
 
-resultsPath = "../tmp/final_reports_64/"
-forestsPath = "../tmp/forests_64_pruned/"
-#dataset = sys.argv[1]
+resultsPath = "../tmp/final_reports/"
+forestsPath = "../tmp/forests/"
 dataset ='adult'
-#compression_achieved = float(sys.argv[2])
-#print(compression_achieved)
 results_file = os.path.join(resultsPath, dataset+'/', 'forest_size.csv')
 node_size = 25
 sizes = [8]
-#sizes = [25,50,100]
 depths = [5]
-#pattern_thresholds = [1]
-#edge_thresholds = [1.0,0.975,0.95,0.925,0.9,0.85,0.8,0.7,0.6]
+
 
 with open(results_file,'a') as f_out:
             f_out.write('')

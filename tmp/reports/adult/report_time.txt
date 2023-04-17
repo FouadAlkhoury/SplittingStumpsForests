@@ -1,52 +1,54 @@
-Fitting Models Time 	 0:00:14.143421
+Fitting Models Time 	 0:00:00
 
 Pruning Time 	 
-Mining Time 	 
-Translating Time :0:00:04.071727
-Mining Time for RF_32_15.graph : 0:00:01.946612
-Fitting Models Time 	 0:00:00.000004
+Fitting Models Time 	 0:00:01.845907
 
 Pruning Time 	 
-Mining Time 	 
-Total Mining Time: 0:00:00.000008
-
-Training Time 	 
-Fitting Models Time 	 0:00:13.589224
+Total Training Time: 2:01:39.641561
 
 Pruning Time 	 
-Mining Time 	 
-Total Mining Time: 0:00:00.000008
-
-Training Time 	 
-Total Training Time: 0:00:00.000089
-
-Fitting Models Time 	 0:00:02.555881
+Fitting Models Time 	 0:00:01.506795
 
 Pruning Time 	 
-Mining Time 	 
-Total Mining Time: 0:00:00.000009
-
-Training Time 	 
-Total Training Time: 0:00:00.000018
-
-Fitting Models Time 	 0:00:00.000004
+Total Training Time: 1:55:12.835482
 
 Pruning Time 	 
-Mining Time 	 
-Total Mining Time: 0:00:00.000009
-
-Training Time 	 
-Fitting Models Time 	 0:00:00.000005
+Total Training Time: 0:06:01.495643
 
 Pruning Time 	 
-Mining Time 	 
-Total Mining Time: 0:00:00.000009
-
-Training Time 	 
-Fitting Models Time 	 0:00:00.000004
+Total Training Time: 0:05:18.747673
 
 Pruning Time 	 
-Mining Time 	 
-Total Mining Time: 0:00:00.000009
+Total Training Time: 0:03:58.133095
 
-Training Time 	 
+Pruning Time 	 
+Total Training Time: 0:05:11.692141
+
+Fitting Models Time 	 0:00:01.284683
+
+Pruning Time 	 
+Total Training Time: 0:04:54.189008
+
+Fitting Models Time 	 0:00:01.197317
+
+Pruning Time 	 
+Total Training Time: 0:00:02.989352
+
+Pruning Time 	 
+Total Training Time: 0:00:02.472574
+
+Pruning Time 	 
+Total Training Time: 0:05:01.804397
+
+Pruning Time 	 
+Total Training Time: 0:01:43.347371
+
+Pruning Time 	 
+Total Training Time: 0:00:09.862746
+
+Pruning Time 	 
+Total Training Time: 0:00:11.468505
+
+Pruning Time 	 
+Total Training Time: 0:00:13.107089
+

@@ -1,6 +1,3 @@
-# Written by Sebastian Buschjäger 2018
-# minor changes by Pascal Welke 2020
-
 import sys
 import csv
 import numpy as np
@@ -25,12 +22,9 @@ import joblib
 sys.path.append('../arch-forest/code/')
 import Forest
 import Tree
-from util import writeToReport
 
 resultsPath = "../tmp/results/"
-reportsPath = "../tmp/reports_64/"
-#dataset = None
-#report_file = reportsPath+'/'+dataset + '/report_rf.csv' 
+reportsPath = "../tmp/reports/"
 
 def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, model_dir, size, depth):
 
@@ -43,9 +37,7 @@ def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, mo
 	start = timeit.default_timer()
 	YPredicted = model.predict(XTest)
 	end = timeit.default_timer()
-
 	print("Total time: " + str(end - start) + " ms")
-	#print("Throughput: " + str(len(XTest) / (float(end - start)*1000)) + " #elem/ms")
 
 	print("Saving model")
 	if (issubclass(type(model), DecisionTreeClassifier)):
@@ -62,25 +54,14 @@ def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, mo
 		outFile.write(mymodel.str())
 
 	YPred = model.predict(XTest)
-	#MYPred = mymodel.predict_batch(XTest)
 	r2 = r2_score(YTest,YPred)
 	mae = mean_absolute_error(YTest,YPred)
 	mse = mean_squared_error(YTest,YPred,squared=False)
 	print("r2:", r2)
 
-
 	with open(report_file, 'a') as outFile:
 		outFile.write(str(size) + ', ' + str(depth) + ', ' + str(r2) + ',' + str(mae)+ ',' + str(mse)+ ', \n')
-	outFile.close()        
-#		outFile.write(str(YTest) + '\n')
-#		outFile.write(str(f1) + '\n')
-#		outFile.write(str(auc))        
-        
-	# This can now happen because of classical majority vote
-	# for (skpred, mypred) in zip(SKPred,MYPred):
-	# 	if (skpred != mypred):
-	# 		print("Prediction mismatch!!!")
-	# 		print(skpred, " vs ", mypred)
+	outFile.close()
 
 	print("Saving model to PKL on disk")
 	joblib.dump(model, os.path.join(model_dir, name + ".pkl"))
@@ -88,9 +69,7 @@ def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, mo
 	print("*** Summary ***")
 	print("#Examples\t #Features\t R2\t Avg.Tree Height")
 	print(str(r2) + "\t" + str(mymodel.getAvgDepth()))
-	#print(str(len(XTest)) + "\t" + str(len(XTest[0])) + "\t" + str(accuracy) + "\t" + str(mymodel.getAvgDepth()))    
-#	writeToReport(report_file,'Pruning Time \t ')
-#	writeToReport(report_file,'Pruning Time \t ')
+
 	print()
 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''Transform the canonical string format that is given by the lwg and lwgr 
-programs to a json format that is compatible to the format of Sebastian.
+programs to a json format that is compatible to the desired format.
 reads from stdin and prints to stdout
 
 usage: cString2json.py leq|eq patternSize < patternFile > jsonFile

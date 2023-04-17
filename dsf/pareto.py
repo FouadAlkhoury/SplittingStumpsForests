@@ -1,3 +1,4 @@
+# This scripts applies the pareto frontier optimization problem to our task.
 from paretoset import paretoset
 import pandas as pd
 import os
@@ -5,11 +6,7 @@ import numpy as np
 import math
 import sys
 
-
-
-resultsPath = "../tmp/reports_64_no_edges/"
-#dataset = sys.argv[1]
-#size_wanted = float(sys.argv[2])
+resultsPath = "../tmp/reports/"
 datasets = ['adult','bank','credit','drybean','magic','rice','room','satlog','shopping','spambase']
 edge_thresholds = [0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6,0.55]
 thresholds_counter = [0,0,0,0,0,0,0,0,0]
@@ -68,17 +65,11 @@ for d,dataset in enumerate(datasets):
 
                 if (float(line_arr[6]) >= rf_acc_64_15[d] -0.001 and int(line_arr[0]) == size and int(line_arr[1]) == depth and float(line_arr[3]) != 1.0):
                     results_list.append((float(line_arr[3]),float(line_arr[6]),rf_size_64_15[d] / int(line_arr[15])))
-                    #compression_list.append(rf_size_64_15[d] / int(line_arr[15]))
-                    #i = sizes.index(int(line_arr[0]))
-                    #j = depths.index(int(line_arr[1]))
-                    #k = edge_thresholds.index(float(line_arr[3]))
 
-                    #arr[i][j][k] += 1
     results_list.sort(key=lambda x: x[0], reverse=True)
     if (len(results_list) > 0):
         print(dataset)
         print(results_list)
-        #nodes_list.append(line_arr[15])
         for i,j,k in results_list:
 
             p_list.append(i)

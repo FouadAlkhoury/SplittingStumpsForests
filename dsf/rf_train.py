@@ -1,8 +1,6 @@
-
+# The script trains a random forest model.
 import os
 import json
-
-
 from sklearn.utils.estimator_checks import check_estimator
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import cross_val_score, GridSearchCV
@@ -27,28 +25,22 @@ from util import writeToReport
 import numpy as np
 
 dataPath = "../data/"
-forestsPath = "../tmp/forests_64_pruned/"
-snippetsPath = "../tmp/snippets_64_no_edges/"
+forestsPath = "../tmp/forests/"
+snippetsPath = "../tmp/stumps/"
 samplesPath = "../tmp/samples/"
 resultsPath = "../tmp/results/"
-reportsPath = "../tmp/reports_64_no_edges_pruned/"
+reportsPath = "../tmp/reports/"
 
-#dataset = sys.argv[1]
 dataset = 'letter'
 forest_types = ['RF']
 forest_depths = [5,10,15]
 forest_sizes = [16,32]
 param_grid = {  'min_samples_leaf': [1,5,10,20],  'ccp_alpha': [0.005,0.01,0.015,0.02]}
 edge_thresholds = [0.7]
-#forest_depths = [5]
-#forest_sizes = [32]
 
 maxPatternSize = 1
 minThreshold = 1
 maxThreshold = 1
-
-#edge_thresholds = [1.0, 0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6]
-
 
 scoring_function = 'accuracy'
 # learners that are to be used on top of Decision Snippet Features
@@ -76,10 +68,6 @@ def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, mo
 
     print("Fitting", name)
     model.fit(XTrain, YTrain)
-    # shap_values = shap.TreeExplainer(model).shap_values(XTrain)
-    # f = plt.figure()
-    # shap.summary_plot(shap_values, XTrain, plot_type = 'bar')
-    # f.savefig(reportsPath + "summary_plot1.png", bbox_inches='tight', dpi=600)
 
     print("Testing ", name)
     # start = timeit.default_timer()
@@ -87,12 +75,7 @@ def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, mo
     YPredicted = model.predict(XTest)
     end_testing = datetime.datetime.now()
     testing_time = (end_testing - start_testing)
-    # print('testing result = ' + str(train_acc))
     print('Testing Time ' + str(testing_time))
-    # end = timeit.default_timer()
-
-    # print("Testing time: " + str(end - start) + " ms")
-    # print("Throughput: " + str(len(XTest) / (float(end - start)*1000)) + " #elem/ms")
 
     print("Saving model")
     if (issubclass(type(model), DecisionTreeClassifier)):
@@ -122,15 +105,7 @@ def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, mo
         outFile.write(str(size) + ', ' + str(depth) + ', ' + str(accuracy) + ',' + str(f1_macro) + ',' + str(
             f1_micro) + ',' + str(auc) + ', \n')
     outFile.close()
-    #		outFile.write(str(YTest) + '\n')
-    #		outFile.write(str(f1) + '\n')
-    #		outFile.write(str(auc))
 
-    # This can now happen because of classical majority vote
-    # for (skpred, mypred) in zip(SKPred,MYPred):
-    # 	if (skpred != mypred):
-    # 		print("Prediction mismatch!!!")
-    # 		print(skpred, " vs ", mypred)
 
     print("Saving model to PKL on disk")
     joblib.dump(model, os.path.join(model_dir, name + ".pkl"))
@@ -138,9 +113,7 @@ def testModel(roundSplit, dataset, XTrain, YTrain, XTest, YTest, model, name, mo
     print("*** Summary ***")
     print("#Examples\t #Features\t Accuracy\t Avg.Tree Height")
     print(str(accuracy) + "\t" + str(mymodel.getAvgDepth()))
-    # print(str(len(XTest)) + "\t" + str(len(XTest[0])) + "\t" + str(accuracy) + "\t" + str(mymodel.getAvgDepth()))
-    #	writeToReport(report_file,'Pruning Time \t ')
-    #	writeToReport(report_file,'Pruning Time \t ')
+
     print()
 
 
@@ -161,6 +134,3 @@ for size in forest_sizes:
         print('Initial score: ', gridSearch.best_score_)
         print('Initial parameters: ', gridSearch.best_params_)
 
-        #testModel(True, dataset, X_train, Y_train, X_test, Y_test, model_dir, size, depth)
-
-#'min_samples_split': [25, 50, 100, 150],

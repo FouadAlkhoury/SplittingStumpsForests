@@ -1,3 +1,4 @@
+# The script loads data from dataset files.
 import numpy as np
 import csv
 import operator

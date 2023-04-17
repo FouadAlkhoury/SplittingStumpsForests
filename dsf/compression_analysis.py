@@ -1,11 +1,8 @@
+# The scripts find the compression achieved in several datasets when accepting a drop of 0.01 in accuracy.
 import os
 import numpy as np
-import math
-import sys
 
-resultsPath = "../tmp/reports_64_no_edges/"
-#dataset = sys.argv[1]
-#size_wanted = float(sys.argv[2])
+resultsPath = "../tmp/reports/"
 datasets = ['adult','bank','credit','drybean','magic','rice','room','satlog','shopping','spambase']
 edge_thresholds = [0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6]
 sizes = [16,32,64]
@@ -54,44 +51,16 @@ for d,dataset in enumerate(datasets):
         if (len(line) > 1 and 'Nodes' not in line):
 
             line_arr = line.split(',')
-            #print(line_arr)
             if (line_arr[15] != ''):
 
-                if (float(line_arr[6]) >= rf_acc_64_15[d] -0.02 and int(line_arr[0]) == size and int(line_arr[1]) == depth and float(line_arr[3]) != 1.0):
+                if (float(line_arr[6]) >= rf_acc_64_15[d] -0.01 and int(line_arr[0]) == size and int(line_arr[1]) == depth and float(line_arr[3]) != 1.0):
                     test_acc_list.append((float(line_arr[6]),rf_size_64_15[d]/int(line_arr[15])))
-                    #i = sizes.index(int(line_arr[0]))
-                    #j = depths.index(int(line_arr[1]))
-                    #k = edge_thresholds.index(float(line_arr[3]))
 
-                    #arr[i][j][k] += 1
     print(dataset)
     test_acc_list.sort(key=lambda x: x[1], reverse=True)
     if (len(test_acc_list) > 0):
 
         print(test_acc_list[0])
-
-    #nodes_list.append(line_arr[15])
-
-
-#print(arr)
-
-
-'''
-test_acc_list.sort(key=lambda x: x[0], reverse= True)
-print(test_acc_list)
-print('Acc: ' + str(test_acc_list[0][0]))
-print('nodes count: ' + str(test_acc_list[0][1]))
-print('size ' + str((test_acc_list[0][1] * 25)/1024))
-
-stats_file = os.path.join(resultsPath, dataset + '/',
-                          'report_below_size_' + str(size_wanted) + '.csv')
-with open(stats_file, 'w') as f_out:
-    f_out.write(
-        'Forest Size, Forest Depth, Patterns Threshold, Edges Threshold, Test Accuracy, Accuracy drop, F1 Macro drop, ROC AUC drop, Patterns Count,Compression, Training Time, Pruning Time,\n')
-'''
-
-
-
 
 
 
