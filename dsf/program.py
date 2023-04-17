@@ -1,15 +1,12 @@
-# %% imports
+# This script finds the splitting nodes, maps the input data to the new feature space induced by the splitting stumps, and trains a linear layer over it.
+# To run this script, give a dataset, forest depth and size, and filtering threshold values 'lines: 31-34'
+# The trained forests will be exported to forests folder.
+# The selected splitting stumps will be exported to stumps folder.
+# The results of linear layer training will be written in reports folder.
 
+# imports
 import os
 import json
-import subprocess
-import pickle
-import sys
-import re
-
-from sklearn.utils.estimator_checks import check_estimator
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
@@ -17,39 +14,29 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import Pipeline
-from sklearn.model_selection import cross_val_predict
-
 import ReadData as ReadData
-import cString2json as cString2json
-import json2graphNoLeafEdgesWithSplitValues as json2graphNoLeafEdgesWithSplitValues
 from fitModels import fitModels
 import DecisionSnippetFeatures as DecisionSnippetFeatures
-import Forest
 import datetime
 from util import writeToReport
 import numpy as np
 
 dataPath = "../data/"
-forestsPath = "../tmp/forests_64_pruned/"
-snippetsPath = "../tmp/snippets_64_no_edges/"
+forestsPath = "../tmp/forests/"
+stumpsPath = "../tmp/stumps/"
 samplesPath = "../tmp/samples/"
 resultsPath = "../tmp/results/"
-reportsPath = "../tmp/reports_64_no_edges_pruned/"
+reportsPath = "../tmp/reports/"
 
-#dataset = sys.argv[1]
-dataset = 'satlog'
-forest_types = ['RF']
+dataset = 'adult' # datasets that can be used: adult, bank, credit, drybean, letter, magic, rice, room, shopping, spambase, and satlog.
 forest_depths = [5,10,15]
 forest_sizes = [16,32,64]
-edge_thresholds = [1.0, 0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6,0.55]
-#forest_depths = [5]
-#forest_sizes = [32]
-
+thresholds = [0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45]
+edge_thresholds = [1.0 - x  for x in thresholds]
+forest_types = ['RF']
 maxPatternSize = 1
 minThreshold = 1
 maxThreshold = 1
-
-
 
 scoring_function = 'accuracy'
 # learners that are to be used on top of Decision Snippet Features
@@ -77,8 +64,6 @@ if not os.path.exists(report_model_dir):
 # %% create forest data, evaluate and report accuracy on test data
 start_fitting_models = datetime.datetime.now()
 
-print('\n\nHERE ARE THE ACCURACIES ON TEST DATA OF THE ORIGINAL RANDOM FORESTS\n(don\'t worry, test data is not used for training)\n')
-
 fitModels(roundSplit=True,  dataset = dataset,
               XTrain=X_train, YTrain=Y_train, 
               XTest=X_test, YTest=Y_test, 
@@ -87,9 +72,7 @@ fitModels(roundSplit=True,  dataset = dataset,
 end_fitting_models = datetime.datetime.now()
 fitting_models_time = (end_fitting_models- start_fitting_models)
 
-print('Fitting Models Time: '+str(fitting_models_time))  
-
-
+print('Fitting Models Time: '+str(fitting_models_time))
         
 writeToReport(report_time_file,'Fitting Models Time \t ' + str(fitting_models_time) + '\n')
 
@@ -97,7 +80,6 @@ writeToReport(report_thresholds,'Forest Size, Forest Depth, Patterns threshold, 
 
 start_pruning_total = datetime.datetime.now()
 writeToReport(report_time_file,'Pruning Time \t ')
-#writeToReport(report_file,'RF \t Sigma \t Pruning Time')
 
 patterns_count = 0
 patterns_ratio = 0
@@ -118,7 +100,6 @@ def dsf_transform_edges(snippets_file, X, is_train):
         dsf = DecisionSnippetFeatures.FrequentSubtreeFeatures(
             map(lambda x: x['pattern'], frequentpatterns))
         fts = dsf.fit_transform(X)
-        #print(len(fts[0]))
 
         # transform to onehot encodings for subsequent processing by linear methods
         categories = dsf.get_categories()
@@ -132,10 +113,6 @@ start_training_total = datetime.datetime.now()
 
 writeToReport(report_file, 'Depth, Frequency, Model, Accuracy, Deviation,')
 
-### prun
-
-#edge_thresholds = [0.7,0.6]
-#edge_thresholds = [1.0,0.975,0.95,0.925,0.9,0.85,0.8,0.7,0.6]
 counter = 0
 pruning_time = datetime.timedelta()
 report_pruning_dir = reportsPath+'/'+dataset 
@@ -143,13 +120,9 @@ report_pruning_file = report_pruning_dir + '/report_pruning_time.txt'
 score = 0
 scoreStr = ''
 
-
-
 writeToReport(report_pruning_file,'Forest Size, Forest Depth, Pruning threshold, Pruning Time'+ '\n')
-#for graph_file in filter(lambda x: x.endswith('.json'), sorted(os.listdir(os.path.join(forestsPath, dataset)))):
-counter = 0
 
-
+# select nodes that surpasses the threshold
 def traverse(tree, threshold):
     if ("probLeft" in tree and "probRight" in tree):
 
@@ -161,7 +134,7 @@ def traverse(tree, threshold):
         traverse(tree["leftChild"], threshold)
         traverse(tree["rightChild"], threshold)
 
-
+# write the selected nodes to a new patterns file
 for graph_file in filter(lambda x: x.endswith('.json'), sorted(os.listdir(os.path.join(forestsPath, dataset)))):
     forests_file = os.path.join(forestsPath, dataset, graph_file)
     print(forests_file)
@@ -177,13 +150,11 @@ for graph_file in filter(lambda x: x.endswith('.json'), sorted(os.listdir(os.pat
             counter = 0
 
             pruned_file = graph_file[:-5] + '_pruned_' + str(th) + '.json'
-            snippets_file = os.path.join(snippetsPath, dataset, pruned_file)
+            snippets_file = os.path.join(stumpsPath, dataset, pruned_file)
             with open(snippets_file, 'w') as f_out:
                 f_out.write("[")
-                #print(pruned_file)
                 for tree in trees:
                     print("tree")
-
                     traverse(tree, th)
                 for p in patterns:
                     f_out.write(
@@ -191,33 +162,26 @@ for graph_file in filter(lambda x: x.endswith('.json'), sorted(os.listdir(os.pat
                             p[0]) + ",\"split\":" + str(p[1]) + "}}")
                     f_out.write(",\n")
                     counter += 1
-                # f_out.write("\n")
-
                 f_out.seek(0, 2)
                 f_out.seek(f_out.tell() - 2, 0)
                 f_out.truncate()
                 f_out.write("]")
-
-            ## nodes count
 
 def compute_nodes_count(snippets_file):
         
         with open(snippets_file,'r') as f:
             text = f.read()
             nodes_count = text.count('"id"')
-            #print(count)
         f.close()  
         
         return nodes_count
-
         
-### training
+### training of the selected nodes
 acc_ref = 0.0
 f1_macro_ref = 0.0
 roc_auc_ref = 0.0
 patterns_count_ref = 0
 nodes_count_ref = 0
-
 
 print('\n\nStart Training\n')
 
@@ -231,16 +195,12 @@ def train_model_on_top(model, fts_onehot, Y_train, scoring_function, model_name,
 
         if scaling:
             model = Pipeline([('scaler', StandardScaler()), (model_name, model)])
-
-      
         dsf_score = 0
         dsf_std = 0
         writeToReport(report_file, str(model_name) + '\t' + str(descriptor) + '\t' + str(dsf_score)  + ' +- ' + str(dsf_std))
-      
         model.fit(fts_onehot, Y_train)
         train_acc = model.score(fts_onehot,Y_train)
         return train_acc, model
-
 
 acc_ref = 1.0
 f1_macro_ref = 1.0
@@ -249,15 +209,13 @@ patterns_count_ref = 1.0
 nodes_count_ref = 1.0
 train_acc = 0.0
 
-# train several models on the various decision snippet features
-#for graph_file in filter(lambda x: x.endswith('.json'), sorted(os.listdir(os.path.join(snippetsPath, dataset)))):
 for size in forest_sizes:
        for depth in forest_depths:
             for frequency in range(minThreshold, maxThreshold+1):
                  for threshold in edge_thresholds: 
         
                     graph_file = 'RF_'+str(size)+'_'+str(depth)+'_pruned_'+str(threshold)+'.json'
-                    snippets_file = os.path.join(snippetsPath, dataset, graph_file)  
+                    snippets_file = os.path.join(stumpsPath, dataset, graph_file)
                     nodes_count = compute_nodes_count(snippets_file)
                     fts_onehot = dsf_transform_edges(snippets_file, X_train, True)
                     if (threshold == 1.0):
@@ -271,71 +229,40 @@ for size in forest_sizes:
                     # train models
                     for model_type, model_class in learners.items():
                         start_training = datetime.datetime.now()
-
                         train_acc, learner_model = train_model_on_top(model_class(**learners_parameters[model_type]), fts_onehot, Y_train, scoring_function, model_type, graph_file)
-                        #results_list.append((xval_score, model_type, graph_file, learner_model, xval_results))
-                        #learner_model = pickle.load(open('model_test.pkl', 'rb'))
-                        #pickle.dump(learner_model, open('model_test.pkl', 'wb'))
                         end_training = datetime.datetime.now()
                         training_time = (end_training - start_training)
                         print('training result = ' + str(train_acc))
                         print('Training Time for '+ graph_file +' : '+str(training_time))
-                       
                         writeToReport(report_file, 'Training Time for '+ graph_file+' , ' + model_type +' : ' +str(training_time))
-
-
-                        fts_onehot_test = dsf_transform_edges(os.path.join(snippetsPath, dataset, graph_file), X_test, False)
-
+                        fts_onehot_test = dsf_transform_edges(os.path.join(stumpsPath, dataset, graph_file), X_test, False)
                         start_testing = datetime.datetime.now()
                         Y_pred = learner_model.predict(fts_onehot_test)
                         end_testing = datetime.datetime.now()
-
                         test_acc = learner_model.score(fts_onehot_test,Y_test)
-
-
-
-
                         testing_time = (end_testing - start_testing)
-                        # print('testing result = ' + str(train_acc))
                         print('Testing Time for ' + graph_file + ' : ' + str(testing_time))
-                        #Y_test = np.argmax(Y_test, axis=0)
                         f1_macro = f1_score(Y_pred,Y_test,average = 'macro')
                         f1_micro = f1_score(Y_pred,Y_test,average = 'micro')
-                        
-                        #roc_auc = roc_auc_score(Y_test,Y_pred)
                         roc_auc = 0
                         if (threshold == 1):
                             acc_ref = test_acc
                             f1_macro_ref = f1_macro
                             roc_auc_ref = roc_auc
-                         
-                        #test_acc = accuracy_score(Y_test, pred_test)
                         print('test accuracy = ' + str(test_acc))
                         print('f1 score macro = ' + str(f1_macro))
                         print('roc auc score = ' + str(roc_auc))
-
-
-
                         writeToReport(report_thresholds,str(size)+','+str(depth)+','+str(frequency)+','+str(threshold)+','+str(learner_model)+','+str(np.round(train_acc,3))+','+str(np.round(test_acc,3))+',' +str(np.round((test_acc - acc_ref),3))+','+str(np.round(f1_macro,3))+',' +str(np.round((f1_macro - f1_macro_ref),3))+','+str(np.round(f1_micro,3))+','+str(np.round(roc_auc,3))+',' +str(np.round((roc_auc - roc_auc_ref),3))+','+str(patterns_count)+','+str(np.round(patterns_ratio,3))+','+str(nodes_count)+','+str(np.round(nodes_ratio,3))+','+str(training_time)+','+str(pruning_time)+','+str(testing_time)+',\n')
 
-                        
-#writeToReport(report_thresholds,str(size)+','+str(depth)+','+str(frequency)+','+str(threshold)+','+str(learner_model)+','+str(np.round(train_acc,3))+','+str(np.round(test_acc,3))+',' +str(np.round((test_acc - acc_ref),3))+','+str(np.round(f1_macro,3))+',' +str(np.round((f1_macro - f1_macro_ref),3))+','+str(np.round(f1_micro,3))+','+str(np.round(roc_auc,3))+',' +str(np.round((roc_auc - roc_auc_ref),3))+','+str(patterns_count)+','+str(np.round(patterns_ratio,3))+','+str(training_time)+','+str(pruning_time)+',\n')                        
-
-                        #print(str(learner_model) + ' ' +str(model_type) + ' ' + str(np.round(test_acc,3)) + ' ' +str(fts_onehot.shape[1]))
-                        
                         # cleanup
                         xval_score, learner_model, xval_results = None, None, None
-                
-                        #writeToReport(report_file, str(best_result[2]) + ',' + str(model_type) + ',' + str(np.round(best_result[0],3)) + ',' + str(np.round(test_acc,3)) + ',' + str(fts_onehot.shape[1]))    
-            
+
 print(filtered_patterns_indexes)            
 
 end_training_total = datetime.datetime.now()
 training_total_time = (end_training_total - start_training_total)
 print('Total Training Time: '+str(training_total_time))  
 writeToReport(report_time_file, 'Total Training Time: '+str(training_total_time) + '\n')
-
-# %% Find, for each learner, the best decision snippet features on training data (the proposed model) and evaluate its performance on test data
 
 writeToReport(report_file,'\n Best \n')
 writeToReport(report_file,'DSF, Model, Accuracy, Deviation,')
