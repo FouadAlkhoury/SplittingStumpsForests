@@ -28,7 +28,7 @@ samplesPath = "../tmp/samples/"
 resultsPath = "../tmp/results/"
 reportsPath = "../tmp/reports/"
 
-dataset = 'adult' # datasets that can be used: adult, bank, credit, drybean, letter, magic, rice, room, shopping, spambase, and satlog.
+dataset = 'satlog' # datasets that can be used: adult, bank, credit, drybean, letter, magic, rice, room, shopping, spambase, and satlog.
 forest_depths = [5,10,15]
 forest_sizes = [16,32,64]
 thresholds = [0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45]
@@ -126,7 +126,7 @@ writeToReport(report_pruning_file,'Forest Size, Forest Depth, Pruning threshold,
 def traverse(tree, threshold):
     if ("probLeft" in tree and "probRight" in tree):
 
-        if (tree["probLeft"] <= threshold and tree["probRight"] <= threshold):
+        if (tree["probLeft"] >= threshold or tree["probRight"] >= threshold):
             feature = tree["feature"]
             split = tree["split"]
             patterns.add((feature, split))

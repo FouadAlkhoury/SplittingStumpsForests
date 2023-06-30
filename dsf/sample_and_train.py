@@ -22,7 +22,7 @@ reportsPath = "../tmp/reports/"
 patternList = []
 
 def sampleRandomForest(dataset, samples_count, patternsCount):
-    with open(snippetsPath + dataset + '/RF_64_15_pruned_1.0.json') as json_file:
+    with open(snippetsPath + dataset + '/RF_64_10_pruned_0.8.json') as json_file:
         data = json.load(json_file)
         for c in range(0, samples_count):
 
@@ -41,9 +41,9 @@ def sampleRandomForest(dataset, samples_count, patternsCount):
     json_file.close()
 
 
-dataset = 'credit'
-samples_count = 10
-patternsCount = 194
+dataset = 'adult'
+samples_count = 1
+patternsCount = 1297
 sampleRandomForest(dataset, samples_count, patternsCount)
 
 X_train, Y_train = ReadData.readData(dataset, 'train', dataPath)

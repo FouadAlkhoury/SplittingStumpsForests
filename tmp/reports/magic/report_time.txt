@@ -19,3 +19,11 @@ Total Training Time: 1:16:13.144648
 Pruning Time 	 
 Total Training Time: 0:02:33.451128
 
+Fitting Models Time 	 0:00:01.395587
+
+Pruning Time 	 
+Fitting Models Time 	 0:00:01.306662
+
+Pruning Time 	 
+Total Training Time: 0:00:10.145268
+

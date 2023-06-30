@@ -169,3 +169,11 @@ Training Time for RF_64_5_pruned_0.55.json , LR : 0:00:02.921649
 LR	RF_64_10_pruned_0.55.json	0 +- 0
 Training Time for RF_64_10_pruned_0.55.json , LR : 0:03:11.206847
 LR	RF_64_15_pruned_0.55.json	0 +- 0
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+LR	RF_64_15_pruned_0.975.json	0 +- 0
+Depth, Frequency, Model, Accuracy, Deviation,
+LR	RF_64_15_pruned_0.99.json	0 +- 0

@@ -2,7 +2,7 @@
 import os
 
 dataPath = "../data/"
-dataset = 'adult'
+dataset = 'wpbc'
 data_file = os.path.join(dataPath, dataset + '/', dataset)
 data_all = data_file + '_all.train'
 data_train = data_file + '.train'

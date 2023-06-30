@@ -7,7 +7,7 @@ import sys
 
 resultsPath = "../tmp/final_reports/"
 forestsPath = "../tmp/forests/"
-dataset ='adult'
+dataset ='aloi'
 results_file = os.path.join(resultsPath, dataset+'/', 'forest_size.csv')
 node_size = 25
 sizes = [8]

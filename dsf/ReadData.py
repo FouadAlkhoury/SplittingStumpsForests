@@ -21,6 +21,10 @@ def readData(dataset, type, path):
 		return readDataLetter(type, path)
 	if dataset == 'bank':
 		return readDataBank(type, path)
+	if dataset == 'breast':
+		return readDataBreast(type, path)
+	if dataset == 'uber':
+		return readDataUber(type, path)
 	if dataset == 'adult':
 		return readDataAdult(type, path)
 	if dataset == 'drinking':
@@ -53,6 +57,15 @@ def readData(dataset, type, path):
 		return readDataCar(type, path)
 	if dataset == 'shopping':
 		return readDataShopping(type, path)
+	if dataset == 'ionosphere':
+		return readDataIonosphere(type, path)
+	if dataset == 'aloi':
+		return readDataAloi(type, path)
+	if dataset == 'waveform':
+		return readDataWaveform(type, path)
+	if dataset == 'wpbc':
+		return readDataWpbc(type, path)
+
 
 	# error
 	raise Exception('Name of dataset unknown: ' + dataset)
@@ -185,6 +198,53 @@ def readDataSkin(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRa
 
 	return X, Y
 
+
+def readDataIonosphere(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRandomForests/arch-forest/data/"):
+	if (type == 'train'):
+		filename = os.path.join(path, "ionosphere", "ionosphere.train")
+	if (type == 'test'):
+		filename = os.path.join(path, "ionosphere", "ionosphere.test")
+
+	X = np.loadtxt(filename, delimiter=',', dtype=np.float64)
+	Y = X[:, -1]
+	X = X[:, :-2]
+
+	return X, Y
+
+
+
+def readDataBreast(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRandomForests/arch-forest/data/"):
+	if (type == 'train'):
+		filename = os.path.join(path, "breast", "breast.train")
+	if (type == 'test'):
+		filename = os.path.join(path, "breast", "breast.test")
+
+	X = np.loadtxt(filename, delimiter=',', dtype=np.float64)
+	Y = X[:, -1]
+	X = X[:, 1:-1]
+
+
+	return X, Y
+
+
+def readDataUber(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRandomForests/arch-forest/data/"):
+	if (type == 'train'):
+		filename = os.path.join(path, "uber", "uber.train")
+	if (type == 'test'):
+		filename = os.path.join(path, "uber", "uber.test")
+
+	X = np.loadtxt(filename, delimiter=',', dtype = 'str')
+	Y = X[:, 2]
+	X = X[:, 4:-1]
+	X = np.array(X)
+	X[X == ''] = 0
+	Y = np.array(Y)
+
+	X = X.astype(np.float)
+	Y = Y.astype(np.float)
+	return X, Y
+
+
 def readDataTemperature(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRandomForests/arch-forest/data/"):
 	
 	if (type =='train'):
@@ -208,6 +268,43 @@ def readDataRoom(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRa
 	X = np.loadtxt(filename, delimiter=',',dtype = np.float64)
 	Y = X[:, -1]
 	X = X[:, :-1]
+
+	return X, Y
+
+
+def readDataAloi(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRandomForests/arch-forest/data/"):
+	if (type == 'train'):
+		filename = os.path.join(path, "aloi", "aloi.train")
+	if (type == 'test'):
+		filename = os.path.join(path, "aloi", "aloi.test")
+
+	X = np.loadtxt(filename, delimiter=',', dtype=np.float64)
+	Y = X[:, 0]
+	X = X[:, 1:-1]
+
+	return X, Y
+
+def readDataWaveform(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRandomForests/arch-forest/data/"):
+	if (type == 'train'):
+		filename = os.path.join(path, "waveform", "waveform.train")
+	if (type == 'test'):
+		filename = os.path.join(path, "waveform", "waveform.test")
+
+	X = np.loadtxt(filename, delimiter=',', dtype=np.float64)
+	Y = X[:,-1]
+	X = X[:, :-2]
+
+	return X, Y
+
+def readDataWpbc(type, path="/home/falkhoury/Study/Lab/Project/frequentTreesInRandomForests/arch-forest/data/"):
+	if (type == 'train'):
+		filename = os.path.join(path, "wpbc", "wpbc.train")
+	if (type == 'test'):
+		filename = os.path.join(path, "wpbc", "wpbc.test")
+
+	X = np.loadtxt(filename, delimiter=',', dtype=np.float64)
+	Y = X[:,-1]
+	X = X[:, :-2]
 
 	return X, Y
 

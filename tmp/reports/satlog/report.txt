@@ -191,3 +191,10 @@ Training Time for RF_64_15_pruned_0.55.json , LR : 0:00:30.959605
  Best 
 
 DSF, Model, Accuracy, Deviation,
+Depth, Frequency, Model, Accuracy, Deviation,
+LR	RF_64_15_pruned_0.995.json	0 +- 0
+Training Time for RF_64_15_pruned_0.995.json , LR : 0:00:15.030559
+
+ Best 
+
+DSF, Model, Accuracy, Deviation,

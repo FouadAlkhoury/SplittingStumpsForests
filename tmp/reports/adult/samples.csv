@@ -4,3 +4,8 @@ Sample, Test Accuracy
 
  ,mean, std
 ,0.803,0.017
+Sample, Test Accuracy
+1,0.83
+
+ ,mean, std
+,0.83,0.0

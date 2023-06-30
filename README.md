@@ -3,7 +3,7 @@
 Code and data accompanying the paper
 
 Anonymous et al.: 
-Splitting Stump Forests
+Splitting Stump Forests: Tree Ensemble Compression for Edge Devices.
 
 ## Repository Structure
 

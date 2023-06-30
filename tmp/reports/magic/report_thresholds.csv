@@ -180,3 +180,9 @@ Forest Size, Forest Depth, Patterns threshold, Edges Threshold, Learner, Train A
 
 64,15,1,0.55,LogisticRegression(max_iter=10000),0.85,0.831,-0.169,0.807,-0.193,0.831,0,-1.0,913,913.0,913,913.0,0:00:28.953736,0:00:00,
 
+Forest Size, Forest Depth, Patterns threshold, Edges Threshold, Learner, Train Accuracy, Test Accuracy, Test Accuracy (gain), F1_macro, F1_macro (gain), F1_micro, ROC_AUC, ROC_AUC (gain), Patterns Count, Patterns Ratio, Nodes Count, Nodes Ratio, Training Time, Pruning Time
+
+Forest Size, Forest Depth, Patterns threshold, Edges Threshold, Learner, Train Accuracy, Test Accuracy, Test Accuracy (gain), F1_macro, F1_macro (gain), F1_micro, ROC_AUC, ROC_AUC (gain), Patterns Count, Patterns Ratio, Nodes Count, Nodes Ratio, Training Time, Pruning Time
+
+64,15,1,0.995,LogisticRegression(max_iter=10000),0.836,0.84,-0.16,0.816,-0.184,0.84,0,-1.0,250,250.0,250,250.0,0:00:06.716253,0:00:00,0:00:00.002552,
+
