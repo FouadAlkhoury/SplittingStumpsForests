@@ -28,10 +28,13 @@ samplesPath = "../tmp/samples/"
 resultsPath = "../tmp/results/"
 reportsPath = "../tmp/reports/"
 
-dataset = 'satlog' # datasets that can be used: adult, bank, credit, drybean, letter, magic, rice, room, shopping, spambase, and satlog.
-forest_depths = [5,10,15]
-forest_sizes = [16,32,64]
-thresholds = [0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45]
+dataset = 'adult' # datasets that can be used: adult, bank, credit, drybean, letter, magic, rice, room, shopping, spambase, and satlog.
+forest_depths = [5]
+forest_sizes = [64]
+thresholds = [0.45]
+#thresholds = [0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45]
+#forest_depths = [5,10,15]
+#forest_sizes = [16,32,64]
 edge_thresholds = [1.0 - x  for x in thresholds]
 forest_types = ['RF']
 maxPatternSize = 1
@@ -154,7 +157,7 @@ for graph_file in filter(lambda x: x.endswith('.json'), sorted(os.listdir(os.pat
             with open(snippets_file, 'w') as f_out:
                 f_out.write("[")
                 for tree in trees:
-                    print("tree")
+                    #print("tree")
                     traverse(tree, th)
                 for p in patterns:
                     f_out.write(
