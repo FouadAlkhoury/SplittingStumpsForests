@@ -2,8 +2,8 @@
 
 Code and data accompanying the paper
 
-Anonymous et al.: 
 Splitting Stump Forests: Tree Ensemble Compression for Edge Devices.
+Authors: Fouad Alkhoury and Pascal Welke.
 
 ## Repository Structure
 
