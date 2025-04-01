@@ -1,5 +1,5 @@
 # This script finds the splitting nodes, maps the input data to the new feature space induced by the splitting stumps, and trains a linear layer over it.
-# To run this script, give a dataset, forest depth and size, and filtering threshold values 'lines: 39-42'
+# To run this script, give a dataset, forest depth and size, and filtering threshold values 'lines: 58-61'
 # The trained forests will be exported to forests folder.
 # The selected splitting stumps will be exported to stumps folder.
 # The results of linear layer training will be written in reports folder.
