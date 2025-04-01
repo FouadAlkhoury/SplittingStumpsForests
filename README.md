@@ -2,8 +2,8 @@
 
 Code and data accompanying the paper
 
-Splitting Stump Forests: Tree Ensemble Compression for Edge Devices.
-Authors: Fouad Alkhoury and Pascal Welke.
+Splitting Stump Forests: Tree Ensemble Compression for Edge Devices (Extended Version)
+Authors: Fouad Alkhoury, Sebastian Buschjäger, and Pascal Welke.
 
 ## Repository Structure
 
@@ -14,7 +14,7 @@ The results, reports, forests and stumps files are exported to 'tmp' folder.
 
 The file dsf/program.py contains the main experiment, it finds the splitting nodes, maps the input data to the new feature space induced by the splitting stumps, and trains a linear layer over it.
 The script runs as follows:
-In lines: 31-34, give a dataset, forest depth and size, and filtering threshold values. 
+In lines: 58-61, give a dataset, forest depth and size, and filtering threshold values. 
 The trained forests will be exported to tmp/forests folder.
 The selected splitting stumps will be exported to tmp/stumps folder.
 The results of linear layer training will be written in tmp/reports folder.
