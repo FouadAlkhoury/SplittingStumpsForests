@@ -25,8 +25,9 @@ def writeToReport(path,content):
     f.close()
 
 datasets = ['adult','bank','credit','drybean','letter','magic','rice','room','shopping','spambase','satlog']
-split_iterations = 2
-forest_depth = 15
+datasets = ['adult']
+split_iterations = 1
+forest_depth = 5
 forest_size = 64
 thresholds = [0.4]
 decimal_places = [d for d in range(4,5)]
@@ -46,7 +47,7 @@ for dataset in datasets:
 
     lr = LogisticRegression(max_iter=1000)
     lr.fit(X_train,y_train)
-    print(lr.score(X_test_,y_test))
+    print('Logistic Regression accuracy: ' + str(lr.score(X_test_,y_test)))
     writeToReport(report_file_lr,
                   dataset + ',' + str(lr.score(X_test_,y_test))+ '\n')
 
@@ -78,14 +79,14 @@ for dataset in datasets:
                     rf.fit(X_train,y_train)
                     acc_list.append(rf.score(X_test_, y_test))
 
-                    print(rf.score(X_test_,y_test))
+                    print('RF accuracy: ' + str(rf.score(X_test_,y_test)))
                     print(get_nodes_count(rf))
 
                     ssf_object, forest, lr, stumps = ssf.SSF.from_data(X_train, y_train, rf, lr, threshold, decimal_place)
                     nodes_count.append(get_nodes_count(rf))
                     X_test = (math.pow(10,decimal_place) * X_test_).astype(int)
                     ssf_mlgen_acc = ssf_object.score(X_test, y_test)
-                    print(round(ssf_mlgen_acc['Accuracy'],4))
+                    print('SSF accuracy: ' + str(round(ssf_mlgen_acc['Accuracy'],4)))
                     test_acc.append(round(ssf_mlgen_acc['Accuracy'],4))
                     stumps_count.append(len(stumps))
 
